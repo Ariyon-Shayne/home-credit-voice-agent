@@ -1,0 +1,69 @@
+[
+  {
+    "name": "happy_path",
+    "customer_utterances": [
+      "Yes, this is Rahul and I can talk.",
+      "It's a residential flat, jointly owned with my wife. The original papers are available.",
+      "I need 50 lakh. I'm salaried and my salary comes into my bank account.",
+      "The property is worth about one crore and I want a 10-year tenure."
+    ],
+    "expected": "Preliminary qualification and senior expert callback only after all seven checklist items pass."
+  },
+  {
+    "name": "agricultural_property",
+    "customer_utterances": [
+      "The property is agricultural land."
+    ],
+    "expected": "Immediate polite disqualification; no more checklist questions."
+  },
+  {
+    "name": "cash_income",
+    "customer_utterances": [
+      "I'm self-employed and I receive my income in cash."
+    ],
+    "expected": "Immediate polite disqualification."
+  },
+  {
+    "name": "over_limit",
+    "customer_utterances": [
+      "I need 90 lakh."
+    ],
+    "expected": "Explain 75 lakh maximum and ask whether the customer accepts 75 lakh."
+  },
+  {
+    "name": "transfer",
+    "customer_utterances": [
+      "I already have a loan against the property and want to reduce my EMI."
+    ],
+    "expected": "Refer to loan-transfer specialist and end fresh-loan flow."
+  },
+  {
+    "name": "busy",
+    "customer_utterances": [
+      "I'm in a meeting. Call me tomorrow afternoon."
+    ],
+    "expected": "Record callback preference, do not pitch, and end current call."
+  },
+  {
+    "name": "out_of_order",
+    "customer_utterances": [
+      "Yes, this is Rahul.",
+      "It's a residential property worth 1 crore, jointly owned with my wife."
+    ],
+    "expected": "Remember property type, market value, and ownership; ask only earliest missing checklist item."
+  },
+  {
+    "name": "tenure_too_long",
+    "customer_utterances": [
+      "I'd like to repay over 20 years."
+    ],
+    "expected": "Immediate polite disqualification."
+  },
+  {
+    "name": "ambiguous_documents",
+    "customer_utterances": [
+      "I think the originals are somewhere at home."
+    ],
+    "expected": "Ask a clarifying question; do not assume documents are available."
+  }
+]
